@@ -72,6 +72,11 @@ body {
     margin-left: 30px;
 }
 
+.nav-action {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -89,6 +94,43 @@ body {
     font-size: 20px;
     cursor: pointer;
     transition: var(--transition);
+    color: var(--text-color);
+}
+
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid rgba(94, 96, 206, 0.25);
+    border-radius: 999px;
+    background-color: rgba(94, 96, 206, 0.08);
+    gap: 4px;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.lang-btn.active:hover {
+    color: #fff;
+}
+
+.lang-btn:hover,
+#theme-toggle:hover {
+    color: var(--primary-color);
 }
 
 .burger {
@@ -416,6 +458,10 @@ input, textarea {
     color: var(--text-color);
 }
 
+textarea {
+    resize: vertical;
+}
+
 .error-message {
     color: #e74c3c;
     font-size: 0.9rem;
@@ -476,6 +522,14 @@ footer {
         margin: 10px 0;
     }
 
+    .nav-action {
+        justify-content: center;
+    }
+
+    .language-switch {
+        margin-top: 10px;
+    }
+
     .nav-links.active {
         right: 0;
     }
@@ -523,6 +577,9 @@ footer {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #333;
 }
 
 .modal-gallery {

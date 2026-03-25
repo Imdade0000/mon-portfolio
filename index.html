@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="logo">Imdade MOUTAÏROU</div>
         <ul class="nav-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#a-propos">À propos</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button id="theme-toggle">🌙</button></li>
+            <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#a-propos" data-i18n="nav.about">À propos</a></li>
+            <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            <li class="nav-action">
+                <div class="language-switch" role="group" aria-label="Language switcher">
+                    <button type="button" class="lang-btn active" data-lang-switch="fr">FR</button>
+                    <button type="button" class="lang-btn" data-lang-switch="en">EN</button>
+                </div>
+            </li>
+            <li class="nav-action">
+                <button id="theme-toggle" type="button" aria-label="Activer le mode sombre">🌙</button>
+            </li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -24,225 +31,216 @@
         </div>
     </nav>
 
-    <!-- Section Accueil -->
     <section id="accueil">
-    <div class="hero-content">
-        <!-- Photo de profil circulaire -->
-        <div class="profile-photo-container">
-            <div class="profile-photo">
-                <img src="ma-photo.jpg" alt="Imdade MOUTAÏROU">
-            </div>
-        </div>
-        
-        <h1>Bonjour, je suis <span class="highlight">Imdade MOUTAÏROU</span></h1>
-        <h2>Développeur Web Full-Stack</h2>
-        <a href="#projets" class="btn">Voir mes projets</a>
-    </div>
-</section>
-
-    <!-- Section À propos -->
-    <!-- Section À propos avec logos -->
-<section id="a-propos">
-    <div class="container">
-        <h2>À propos de moi</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Bienvenue sur mon portfolio ! Je suis un développeur web full-stack passionné par la création d'expériences numériques interactives et intuitives.</p>
-                <p>Mon parcours m'a permis d'acquérir des compétences solides en développement full-stack, avec une attention particulière pour le design et l'expérience utilisateur.</p>
-                <p>Au fil de mes projets personnels, stages et collaborations, j'ai pu développer des compétences solides aussi bien côté front-end (HTML5, CSS3, JavaScript, Angular/React) que côté back-end (Node.js, Laravel, NestJS), en passant par la gestion de bases de données (MySQL, PostgreSQL, Prisma). Je suis également à l'aise avec l'intégration d'API RESTful, l'authentification sécurisée (JWT), et l'utilisation d'outils modernes comme Git, Docker ou Postman.</p>
-                <p>Je souhaite contribuer à la digitalisation des entreprises en développant des solutions logicielles intuitives, performantes et adaptées aux besoins métiers avec une expertise en intégration front-end et back-end</p>
-            </div>
-            <div class="skills">
-                <h3>Mes compétences</h3>
-                <div class="skill-bars">
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
-                            <span>HTML & CSS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Responsive Design" class="skill-icon">
-                            <span>Responsive Design</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
-                            <span>PHP</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon">
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" class="skill-icon">
-                            <span>React Native</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 83%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="skill-icon">
-                            <span>Angular</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="ReactJS" class="skill-icon">
-                            <span>ReactJS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 83%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="skill-icon">
-                            <span>Laravel</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 87%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS" class="skill-icon">
-                            <span>NestJS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="NextJS" class="skill-icon">
-                            <span>NextJS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-icon">
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
+        <div class="hero-content">
+            <div class="profile-photo-container">
+                <div class="profile-photo">
+                    <img src="ma-photo.jpg" alt="Imdade MOUTAÏROU">
                 </div>
             </div>
-            <div class="founder-section">
-                <h3>Fondateur</h3>
-                <p>Je suis également le fondateur de <a href="https://www.xchangeconverter.com" target="_blank" class="founder-link">Xchange</a>, une application de conversion de devises monétaires en temps réel. Ce projet reflète mon engagement en tant que développeur full-stack à créer des solutions innovantes et pratiques pour résoudre des problèmes réels.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- Section Projets -->
-    <section id="projets">
+            <h1 data-i18n-html="hero.title">Bonjour, je suis <span class="highlight">Imdade MOUTAÏROU</span></h1>
+            <h2 data-i18n="hero.subtitle">Développeur Web Full-Stack</h2>
+            <a href="#projets" class="btn" data-i18n="hero.cta">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="a-propos">
         <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="tous">Tous</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web"> 
-                    <img src="page-inscription.png" alt="Projet 1"> 
-                    <div class="project-info"> 
-                        <h3>Application de suivi de santé</h3> 
-                        <p>Réalisée avec du PHP</p> 
-                        <a href="#" class="project-link" data-images="dashboard-menu.png,ajout-patient.png,liste-patients.png,page-inscription.png" data-description="Cette application a été développé avec du php laravel, bootstrap et du JavaScript.">Voir détails</a> 
-                    </div> 
+            <h2 data-i18n="about.title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.p1">Bienvenue sur mon portfolio ! Je suis un développeur web full-stack passionné par la création d'expériences numériques interactives et intuitives.</p>
+                    <p data-i18n="about.p2">Mon parcours m'a permis d'acquérir des compétences solides en développement full-stack, avec une attention particulière pour le design et l'expérience utilisateur.</p>
+                    <p data-i18n="about.p3">Au fil de mes projets personnels, stages et collaborations, j'ai pu développer des compétences solides aussi bien côté front-end (HTML5, CSS3, JavaScript, Angular/React) que côté back-end (Node.js, Laravel, NestJS), en passant par la gestion de bases de données (MySQL, PostgreSQL, Prisma). Je suis également à l'aise avec l'intégration d'API RESTful, l'authentification sécurisée (JWT), et l'utilisation d'outils modernes comme Git, Docker ou Postman.</p>
+                    <p data-i18n="about.p4">Je souhaite contribuer à la digitalisation des entreprises en développant des solutions logicielles intuitives, performantes et adaptées aux besoins métiers avec une expertise en intégration front-end et back-end.</p>
                 </div>
-                <div class="project-card" data-category="web">
-                    <img src="liste-catégories.png" alt="Projet 2">
-                    <div class="project-info">
-                        <h3>Application de gestion de stock</h3>
-                        <p>Réalisée avec Angular(côté front-end) et Laravel(côté back-end)</p>
-                        <a href="#" class="project-link" data-images="modal.png,validation-suppression.png,suppression.png,inscription.png" data-description="Cette application a été développé avec Angular en front-end notamment avec Tailwind CSS et laravel au niveau du back-end. Il comprend un système de panier d'achat, une page produit interactive et un processus de paiement sécurisé.">Voir détails</a> 
+                <div class="skills">
+                    <h3 data-i18n="about.skillsTitle">Mes compétences</h3>
+                    <div class="skill-bars">
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
+                                <span>HTML &amp; CSS</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Responsive Design" class="skill-icon">
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
+                                <span>PHP</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon">
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" class="skill-icon">
+                                <span>React Native</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="skill-icon">
+                                <span>Angular</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="ReactJS" class="skill-icon">
+                                <span>ReactJS</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="skill-icon">
+                                <span>Laravel</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS" class="skill-icon">
+                                <span>NestJS</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="NextJS" class="skill-icon">
+                                <span>NextJS</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-icon">
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
-                    <img src="météo.png" alt="Projet 3">
-                    <div class="project-info">
-                        <h3>Projet 3</h3>
-                        <p>Application mobile d'affichage de météo</p>
-                        <a href="#" class="project-link" data-images="météo.png" data-description="Ce site a été développé avec HTML, CSS et JavaScript.">Voir détails</a> 
-                    </div>
+                <div class="founder-section">
+                    <h3 data-i18n="founder.title">Fondateur</h3>
+                    <p data-i18n-html="founder.body">Je suis également le fondateur de <a href="https://www.xchangeconverter.com" target="_blank" rel="noopener noreferrer" class="founder-link">Xchange</a>, une application de conversion de devises monétaires en temps réel. Ce projet reflète mon engagement en tant que développeur full-stack à créer des solutions innovantes et pratiques pour résoudre des problèmes réels.</p>
                 </div>
-                <div class="project-card" data-category="web">
-                    <img src="taskflow-dashboard.png" alt="Projet 4">
-                    <div class="project-info">
-                        <h3>API de gestion des projets, suivi et automatisation des tâches</h3>
-                        <p>Réalisée avec Angular et Tailwind CSS en front-end et NestJS, MySQL, Prisma, JWT pour l'authentification sécurisée, Bcrypt pour le hachage des mots de passe en back-end. Socket.io pour les notifications instantanées et MailDev pour les codes de vérification et réinitialisation de mot de passe</p>
-                        <a href="#" class="project-link" data-images="taskflow-page_de_connexion.png,taskflow-vérification.png,taskflow-projet.png,taskflow-projets.png,taskflow-utilisateurs.png,taskflow-rôles.png,taskflow-gestion_des_tâches.png,taskflow-membres_projet.png,taskflow-membre.png,taskflow-sélection_membre.png,taskflow-gérer_membre.png,taskflow-roles_projet.png,taskflow-sélection_role.png,taskflow-rôles.png,taskflow-utilisateurs.png,taskflow-sélection_utilisateur.png,taskflow-sélection_utilisateurs.png,taskflow-permission_projet.png,taskflow-notification.png,taskflow-notifications.png,taskflow-commentaire.png,taskflow-inscription.png" data-description="Cette API a été conçue pour aider les entreprises à mieux gérer leurs projets, automatiser le suivi des tâches et recevoir des notifications en temps réel pour une meilleure productivité.">Voir détails</a> 
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="web">
-                    <img src="beni-dashboard.png" alt="Projet 5">
-                    <div class="project-info">
-                        <h3>ChatBot de discussion</h3>
-                        <p>Réalisée avec Gpt-trainer</p>
-                        <a href="#" class="project-link" data-images="beni-dashboard.png,beni-interface.png,beni-question.png,beni-remerciement.png" data-description="Ce ChatBot est un assistant virtuel qui répond à toutes les préoccupations des utilisateurs concernant les informations d'une entreprise.">Voir détails</a> 
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="web">
-                    <img src="accueil-personnel.png" alt="Projet 5">
-                    <div class="project-info">
-                        <h3>Plateforme de développement personnel</h3>
-                        <p>Réalisée avec NextJS</p>
-                        <a href="#" class="project-link" data-images="accueil-personnel.png,accueil-footer.png,pdf1-ebook.png,contenu-pdf1-ebook.png,footer-personnel.png" data-description="Je partage à travers cette plateforme de développement personnel des contenus(ebook pdf, vidéos, audios, articles) gratuits et payants concernant tout ce qui est en rapport avec le développement personnel">Voir détails</a> 
-                    </div>
-                </div>
-                
             </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
+    <section id="projets">
+        <div class="container">
+            <h2 data-i18n="projects.title">Mes Projets</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" data-i18n="filters.all">Tous</button>
+                <button class="filter-btn" data-filter="web" data-i18n="filters.web">Web</button>
+                <button class="filter-btn" data-filter="design" data-i18n="filters.design">Design</button>
+                <button class="filter-btn" data-filter="mobile" data-i18n="filters.mobile">Mobile</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-project-id="health-app">
+                    <img src="page-inscription.png" alt="Application de suivi de santé">
+                    <div class="project-info">
+                        <h3 class="project-title">Application de suivi de santé</h3>
+                        <p class="project-summary">Réalisée avec du PHP</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="inventory-app">
+                    <img src="liste-catégories.png" alt="Application de gestion de stock">
+                    <div class="project-info">
+                        <h3 class="project-title">Application de gestion de stock</h3>
+                        <p class="project-summary">Réalisée avec Angular (côté front-end) et Laravel (côté back-end)</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="mobile" data-project-id="weather-app">
+                    <img src="météo.png" alt="Application météo mobile">
+                    <div class="project-info">
+                        <h3 class="project-title">Application météo mobile</h3>
+                        <p class="project-summary">Application mobile d'affichage de météo</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="taskflow-api">
+                    <img src="taskflow-dashboard.png" alt="API de gestion des projets">
+                    <div class="project-info">
+                        <h3 class="project-title">API de gestion des projets, suivi et automatisation des tâches</h3>
+                        <p class="project-summary">Réalisée avec Angular et Tailwind CSS en front-end et NestJS, MySQL, Prisma, JWT, Bcrypt, Socket.io et MailDev en back-end</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="chatbot">
+                    <img src="beni-dashboard.png" alt="Chatbot de discussion">
+                    <div class="project-info">
+                        <h3 class="project-title">ChatBot de discussion</h3>
+                        <p class="project-summary">Réalisée avec GPT-trainer</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="personal-growth-platform">
+                    <img src="accueil-personnel.png" alt="Plateforme de développement personnel">
+                    <div class="project-info">
+                        <h3 class="project-title">Plateforme de développement personnel</h3>
+                        <p class="project-summary">Réalisée avec NextJS</p>
+                        <a href="#" class="project-link" data-i18n="projects.viewDetails">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
-            <h2>Contactez-moi</h2>
+            <h2 data-i18n="contact.title">Contactez-moi</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -255,48 +253,58 @@
                     </div>
                     <div class="contact-item">
                         <i class="icon">📍</i>
-                        <p>Cotonou, Benin</p>
+                        <p data-i18n="contact.location">Cotonou, Bénin</p>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/imdade-moutaïrou-61890a326" class="social-icon">LinkedIn</a>
-                        <a href="mailto:imdademoutairou@gmail.com?subject=Contact%20depuis%20votre%20portfolio&body=Bonjour%20Imdade,%0D%0A%0D%0AJe%20vous%20contacte%20via%20votre%20portfolio..." 
-                        class="social-icon">
-                         Email
-                        </a>
+                        <a href="https://www.linkedin.com/in/imdade-moutairou-61890a326" class="social-icon">LinkedIn</a>
+                        <a href="mailto:imdademoutairou@gmail.com?subject=Contact%20depuis%20votre%20portfolio&body=Bonjour%20Imdade,%0D%0A%0D%0AJe%20vous%20contacte%20via%20votre%20portfolio..." class="social-icon">Email</a>
                         <a href="https://wa.me/22957003506" class="social-icon">WhatsApp</a>
                     </div>
                 </div>
-                <form id="contact-form">
-                   
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.nameLabel">Nom complet</label>
+                        <input id="name" name="name" type="text" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Votre nom complet">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.emailLabel">Adresse email</label>
+                        <input id="email" name="email" type="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="Votre adresse email">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.messageLabel">Message</label>
+                        <textarea id="message" name="message" rows="6" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Décrivez votre projet ou votre besoin"></textarea>
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="submit-btn" data-i18n="contact.form.submit">Envoyer</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Imdade MOUTAÏROU. Tous droits réservés.</p>
+        <p data-i18n-html="footer.copy">&copy; 2026 Imdade MOUTAÏROU. Tous droits réservés.</p>
     </footer>
 
-    <script src="script.js"></script>
-    
-    <!-- Modal pour les détails du projet -->
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 id="modal-title"></h2>
-        <div class="modal-gallery">
-            <div class="main-image-container">
-                <img id="modal-main-image" src="page-inscription.png" alt="Image du projet">
-                <div class="image-nav">
-                    <button id="prev-img">&#10094;</button>
-                    <button id="next-img">&#10095;</button>
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button type="button" class="close-modal" aria-label="Fermer les détails du projet">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div class="modal-gallery">
+                <div class="main-image-container">
+                    <img id="modal-main-image" src="page-inscription.png" alt="Image du projet">
+                    <div class="image-nav">
+                        <button id="prev-img" type="button" aria-label="Image précédente">&#10094;</button>
+                        <button id="next-img" type="button" aria-label="Image suivante">&#10095;</button>
+                    </div>
                 </div>
+                <div id="modal-thumbnails" class="thumbnails"></div>
             </div>
-            <div id="modal-thumbnails" class="thumbnails"></div>
+            <div id="modal-description"></div>
         </div>
-        <div id="modal-description"></div>
     </div>
-</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
