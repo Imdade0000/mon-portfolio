@@ -188,34 +188,40 @@ const projectData = {
     },
     'inventory-app': {
         category: 'web',
-        images: ['modal.png', 'validation-suppression.png', 'suppression.png', 'inscription.png'],
+        images: ['marché_artisanal_accueil.png', 'marché_artisanal_catalogue.png', 'marché_artisanal_collier.png', 'marché_artisanal_footer.png', 'marché_artisanal_register.png',],
         title: {
-            fr: 'Application de gestion de stock',
-            en: 'Inventory Management Application',
+            fr: 'Application de marché artisanal',
+            en: 'Artisan Market App',
         },
         summary: {
-            fr: 'Réalisée avec Angular (côté front-end) et Laravel (côté back-end)',
-            en: 'Built with Angular on the front end and Laravel on the back end',
+            fr: 'Réalisée avec React (côté front-end) et NodeJS, ExpressJS (côté back-end)',
+            en: 'Built with React (front-end) and NodeJS, ExpressJS (back-end)',
         },
         description: {
-            fr: 'Cette application a été développée avec Angular et Tailwind CSS pour le front-end, ainsi que Laravel pour le back-end. Elle inclut un système de panier, une page produit interactive et un parcours de paiement sécurisé.',
-            en: 'This application was built with Angular and Tailwind CSS on the front end and Laravel on the back end. It includes a shopping cart system, an interactive product page, and a secure checkout flow.',
+            fr: 'Marché artisanal est une plateforme de commerce solidaire qui met en vitrine les artisans et commerçants locaux d\'Afrique de l\'Ouest. L\'app permet aux artisans de créer un catalogue de produits (photos, prix, description), et aux clients de parcourir, filtrer et commander via WhatsApp ou email. Elle cible des utilisateurs en Afrique de l\'Ouest, sur mobile et desktop. Elle est toujours en cours de développement',
+            en: 'Marché Artisanal is a fair trade platform that showcases local artisans and merchants in West Africa. The app allows artisans to create a product catalog (photos, prices, descriptions), and customers to browse, filter, and order via WhatsApp or email. It targets users in West Africa, on both mobile and desktop. It is still under development',
         },
     },
     'weather-app': {
         category: 'mobile',
-        images: ['météo.png'],
+        images: ['météo_cotonou.png',
+            'météo_monaco.png',
+            'météo_montréal_prévision.png',
+            'météo_montréal.png',
+            'météo_newyork_prévision.png',
+            'météo_newyork.png',
+        ],
         title: {
             fr: 'Application météo mobile',
             en: 'Mobile Weather Application',
         },
         summary: {
-            fr: 'Application mobile d\'affichage de météo',
-            en: 'Mobile app for displaying weather information',
+            fr: 'Application mobile d\'affichage de météo.',
+            en: 'Mobile app for displaying weather information.',
         },
         description: {
-            fr: 'Cette application météo a été développée avec HTML, CSS et JavaScript pour afficher rapidement les informations météo essentielles.',
-            en: 'This weather application was built with HTML, CSS, and JavaScript to quickly display essential weather information.',
+            fr: 'Cette application météo a été développée avec React et tailwind CSS pour afficher rapidement les informations météo essentielles de n\'importe quelle ville dans le monde. Disponible sur <a href="https://meteo-lifesytle.vercel.app/" target="_blank" rel="noopener noreferrer" class="founder-link">Meteo_app</a>',
+            en: 'This weather application was developed with React and Tailwind CSS to quickly display essential weather information for any city in the world. Available on <a href="https://meteo-lifesytle.vercel.app/" target="_blank" rel="noopener noreferrer" class="founder-link">Meteo_app</a>',
         },
     },
     'taskflow-api': {
@@ -616,7 +622,7 @@ function renderProjectModal(projectId) {
         || getTranslation(currentLanguage, 'modal.noDescription');
 
     modalTitle.textContent = title;
-    modalDescription.textContent = description;
+    modalDescription.innerHTML = description;
     modalThumbnails.innerHTML = '';
 
     project.images.forEach((image, index) => {
