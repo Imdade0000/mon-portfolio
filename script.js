@@ -55,6 +55,7 @@ const translations = {
         contact: {
             title: 'Contactez-moi',
             location: 'Cotonou, Bénin',
+            github: 'Repo GitHub',
             emailSubject: 'Contact depuis votre portfolio',
             emailBody: 'Bonjour Imdade,\n\nJe vous contacte via votre portfolio pour discuter d\'une opportunité ou d\'un projet.\n\nCordialement,',
             form: {
@@ -135,6 +136,7 @@ const translations = {
         contact: {
             title: 'Contact me',
             location: 'Cotonou, Benin',
+            github: 'GitHub Repo',
             emailSubject: 'Contact from your portfolio',
             emailBody: 'Hello Imdade,\n\nI am contacting you through your portfolio to discuss an opportunity or a project.\n\nBest regards,',
             form: {
